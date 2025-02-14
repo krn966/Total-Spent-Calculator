@@ -11,7 +11,7 @@ This script helps you calculate the total amount spent on **Flipkart** by automa
 
 ## 📌 How to Use
 
-1. Open your **Flipkart Orders Page**: [https://www.flipkart.com/orders](https://www.flipkart.com/orders)
+1. Open your **Flipkart Orders Page**: [https://www.flipkart.com/account/orders](https://www.flipkart.com/account/orders)
 2. Open **Developer Console**:
    - **Windows/Linux**: `Ctrl + Shift + J` (Chrome) or `Ctrl + Shift + K` (Firefox)
    - **Mac**: `Cmd + Option + J` (Chrome) or `Cmd + Option + K` (Firefox)
