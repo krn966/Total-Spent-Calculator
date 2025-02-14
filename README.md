@@ -75,7 +75,7 @@ This script helps you calculate the total amount spent on **Flipkart** by automa
 })();
 
 ```
-![Flipkart Script Demo](flipkart.mkv)
+![Flipkart Script Demo](flipkart.gif)
 
 
 ## 📊 Expected Output
