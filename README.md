@@ -39,8 +39,16 @@ This script helps you calculate the total amount spent on **Flipkart** by automa
         let prevHeight = 0;
         while (document.body.scrollHeight !== prevHeight) {
             prevHeight = document.body.scrollHeight;
+            
+            // Click "Show More Orders" button if present
+            let showMoreButton = document.querySelector('button.QqFHMw.v0q-qo');
+            if (showMoreButton) {
+                showMoreButton.click();
+                await new Promise(r => setTimeout(r, 2000)); // Wait for new orders to load
+            }
+
             await scrollToBottom();
-            await new Promise(r => setTimeout(r, 2000));
+            await new Promise(r => setTimeout(r, 2000)); // Extra wait for content to load
         }
     }
 
@@ -52,19 +60,20 @@ This script helps you calculate the total amount spent on **Flipkart** by automa
 
         priceElements.forEach(priceElement => {
             let text = priceElement.innerText.trim();
-            let priceText = text.replace(/[^0-9]/g, "");
+            let priceText = text.replace(/[^0-9]/g, ""); // Extract only numbers
             if (priceText) {
                 totalSpent += parseInt(priceText, 10);
             }
         });
 
-        console.log("───────────────────────────────────────────────");
-        console.log("🛒 TOTAL AMOUNT SPENT ON FLIPKART: ₹ " + totalSpent);
-        console.log("───────────────────────────────────────────────");
+        console.log("%c───────────────────────────────────────────────", "font-size: 20px; font-weight: bold;");
+        console.log("%c🛒 TOTAL AMOUNT SPENT ON FLIPKART: ₹ " + totalSpent, "font-size: 30px; font-weight: bold; color: green;");
+        console.log("%c───────────────────────────────────────────────", "font-size: 20px; font-weight: bold;");
     }
 
     calculateTotalSpent();
 })();
+
 ```
 
 ## 📊 Expected Output
